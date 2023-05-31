@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="newstyle.css">
+     	<title>Save Web Form Data to Spreadsheets</title>
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/sEVnSjMnAVrIm5Uc/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+</head>
+<body>
+  <body>
+  <form id="myForm">
+   <div class="logo">
+    <img src="mylogo.webp" alt="Company Logo" width="400">
+  </div>
+  <h1>Fradel And Spies Food & Beverage Job Application</h1>
+  <h3>Restaurant Job Application</h3>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="index.html" class="animated-button">
+Job Application
+</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="overview.html" class="animated-button">
+Job Overview
+</a>
+  <hr>
+
+  <h4> Thank you for your interest in applying for Fradel and Spies restaurant. This form serves as an employment application where you can apply for our various types of jobs.</h4>
+  <br>
+  <h4> ABOUT US: Our restaurant is new in the city and we would like YOU to be apart of our team. There are a series of questions below - make sure you read everything carefully and answer the questions truthfully. Your submitted application will be viewed under 48 hours and from there, we will contact you by your phone number or your email.</h4>
+  <br>
+  <h4> Any questions regarding Fradel And Food restaurant job application process can be forwarded to FradelAndSpies@gmail.com</h4>
+
+<br>
+<h4> Sincerely,</h4>
+<h4>Frade And Spies Food & Beverage team</h4>
+<hr>
+<br>
+<br>
+<br>
+    <label for="name">Name  *</label>
+    <br>
+    <br>
+    <input type="text" id="name" name="name" required>
+    <br>
+<br>
+    <label for="email">Email  *</label>
+    <br>
+    <br>
+    <input type="email" id="email" name="email" required>
+    <br>
+<br>
+    <label for="phone">Phone  *</label>
+    <br>
+    <br>
+    <input type="tel" id="phone" name="phone" required>
+    <br>
+<br>
+<label for="address">Address (Number and Street, City, Province)  *</label>
+<br>
+<br>
+<input type="address" id="address" name="address" required>
+<br>
+<br>
+<label for="postalcode">Postal Code  *</labe>
+<br>
+<br>
+<input type="postalcode" id="postalcode" name="postalcode" required>
+<br>
+<br>
+<hr>
+<label for="age">Age  *</label>
+<br>
+<br>
+<label><input type="radio" name="age" value="under16"> Under 16</label>
+<br>
+<br>
+<label><input type="radio" name="age" value="16plus">16+</label>
+<hr>
+<br>
+    <label for="position">Position  *</label>
+    <br>
+    <br>
+    <select id="position" name="position" required>
+      <option value="">Select a position</option>
+      <option value="barista">Barista</option>
+      <option value="host">Host/Hostess</option>
+      <option value="cook">Cook</option>
+      <option value="servers">Server</option>
+      <option value="dishwasher">Dishwasher</option>
+    </select>
+    <br>
+    <br>
+<br>
+<label for="reference">Refered By (Optional):</label>
+<br>
+<br>
+<input type="reference" id="reference" name="reference">
+<br>
+<br>
+<hr>
+<label for="employement"> Employement Status  *</label>
+<br>
+<br>
+<label><input type="radio" name="employement" value="unemployed">Unemployed</label>
+<br>
+<br>
+<label><input type="radio" name="employement" value="part-time">Part-time</label>
+<br>
+<br>
+<label><input type="radio" name="employement" value="full-time">Full-time</label>
+<hr>
+<label for="criminaloffence"> Have you been convicted of a criminal offence for which you have not been pardoned?  *</label>
+<br>
+<br>
+<label><input type="radio" name="criminaloffence" value="criminaloffence">Yes</label>
+<br>
+<br>
+<label><input type="radio" name="criminaloffence" value="criminaloffence">No</label>
+
+<hr>
+
+<br>
+    <label for="availability">Availability (Hour then AM/PM)  *</label>
+    <br>
+    <br>
+    <table>
+      <thead>
+        <tr>
+<th>Day</th>
+<th>From</th>
+<th>To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+ <td>Monday</td>
+<td><input type="text" name="availability-monday-to"></td>
+ <td><input type="text" name="availability-monday-to"></td>
+</tr>
+<tr>
+<td>Tuesday</td>
+<td><input type="text" name="availability-tuesday-from"></td>
+<td><input type="text" name="availability-tuesday-to"></td>
+</tr>
+<tr>
+<td>Wednesday</td>
+<td><input type="text" name="availability-wednesday-from"></td>
+ <td><input type="text" name="availability-wednesday-to"></td>
+</tr>
+<tr>
+<td>Thursday</td>
+ <td><input type="text" name="availability-thursday-from"></td>
+<td><input type="text" name="availability-thursday-to"></td>
+</tr>
+<tr>
+<td>Friday</td>
+ <td><input type="text" name="availability-friday-from"></td>
+ <td><input type="text" name="availability-friday-to"></td>
+</tr>
+<tr>
+<td>Saturday</td>
+<td><input type="text" name="availability-saturday-from"></td>
+<td><input type="text" name="availability-saturday-to"></td>
+</tr>
+<tr>
+<td>Sunday</td>
+<td><input type="text" name="availability-sunday-from"></td>
+<td><input type="text" name="availability-sunday-to"></td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<hr>
+    <h4>I declare that the information contained in this application is correct to the best of my knowledge and understand that any omission or incorrect information is just cause for the rejection of my application or dismissal in accordance with the Company policy. If hired, I understand that I may be transferred to another restaurant because of promotions, training or staffing requirements. I also agree that, at all times, I will follow the rules and regulations of the Company. I authorize the Company, or its agents, to verify the information provided, and to obtain any other information relevant to this application. This information may be obtained by telephone or in writing from educational institutions, my current or former employers, financial institutions, personal information agents and my personal references. This consent is valid during the consideration of my application for employment, and if I am hired, for the duration of my employment.
+</h4>
+<label for="Answer"> Answer  *</label>
+<label><input type="radio" name="Answer" value="yes">Yes</label>
+<br>
+<br>
+<label><input type="radio" name="Answer" value="no">No</label>
+<br>
+<br>
+<br>
+
+ <label for="comments">Comments  *</label>
+    <br>
+    <br>
+    <textarea id="experience" name="comments" rows="5"></textarea>
+    <br>
+<hr>
+
+
+  </form>
+	<button onclick='SubForm()'>Submit</button>
+</body>
+</html>
+
+
+
+
+
