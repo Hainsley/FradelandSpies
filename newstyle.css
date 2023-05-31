@@ -63,7 +63,6 @@ font-family: Arial;
 color: grey;
 font-size: 19px:
 }
-}
 .animated-button {
   background-image: linear-gradient(to bottom, #fff7db, #fff3c0);
   color: #fff;
@@ -135,3 +134,4 @@ border-radius: 4px;
 cursor: pointer;
  font-size: 16px;
  background-color: #45a049;
+}
