@@ -92,3 +92,11 @@ color: grey;
 font-family: Arial;
 font-size: 17px;
 }
+.image { 
+float:center;
+border-radius: 70px;
+align-content: center;
+border: solid 10px;
+border-color:#FFFACD;
+width:400px;
+}
